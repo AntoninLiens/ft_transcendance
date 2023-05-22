@@ -36,10 +36,11 @@ export class GroupService {
 		return await this.groupRepository.save(group);
 	}
 
-	async updatePassword(groupName: string, password: string) {
+	async updatePassword(user: Users, groupName: string, password: string) {
 		if (password.length < 7) throw new HttpException('Password must be longer than 7 characters', 400);
 		const group = await this.getGroupByName(groupName);
 		if (!group) throw new HttpException('Group does not exist', 400);
+		if (group.owner.id !== user.id) throw new HttpException('You are not the owner of this group', 400);
 		const hashedPassword = await bcrypt.hash(password, 10);
 		await this.groupRepository.update(group.id, { password: hashedPassword });
 	}

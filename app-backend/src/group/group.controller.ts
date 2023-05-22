@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Post, Put, Query, Req, UseGuards } from "@nestjs/common";
+import { Body, Controller, Get, Post, Put, Query, Req, UseGuards } from "@nestjs/common";
 import { GroupService } from "./group.service";
 import { Request } from "express";
 import JwtAuthGuard from "src/auth/guards/jwtAuth.guard";
@@ -35,8 +35,8 @@ export class GroupController {
 
 	@Put('updatePassword')
 	@UseGuards(JwtAuthGuard)
-	async updatePassword(@Body() dto: { groupName: string, password: string }) {
-		return await this.groupService.updatePassword(dto.groupName, dto.password);
+	async updatePassword(@Req() req: Request, @Body() dto: { groupName: string, password: string }) {
+		return await this.groupService.updatePassword(<Users>req.user, dto.groupName, dto.password);
 	}
 
 	@Post('addMember')

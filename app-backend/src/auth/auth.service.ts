@@ -31,10 +31,11 @@ export default class AuthService {
 
 	async login(props: LoginDto) {
 		const user = await this.userService.getUserByName(props.name);
+		console.log(user);
 		if (!user)
 			throw new HttpException("User not found", HttpStatus.NOT_FOUND);
 
-		if (user.socket_id)
+		if (user.statut === userStatut.connected)
 			throw new HttpException("User already connected", HttpStatus.BAD_REQUEST);
 
 		if (!await bcrypt.compare(props.password, user.password))

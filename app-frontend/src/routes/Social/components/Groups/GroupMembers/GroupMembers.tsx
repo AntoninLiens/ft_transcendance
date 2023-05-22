@@ -38,7 +38,7 @@ export default function GroupMembers({ setAffPage, group_id }: GroupMembersProps
 
 	const changeGroupPassword = async () => {
 		await axios.put("group/updatePassword", { groupName: group.name, password: newPassword })
-		.catch(err => { setErrorMsg(err.response.data.message); setTimeout(() => {setErrorMsg("")}, 3000); });
+		.catch(err => { console.log(err); setErrorMsg(err.response.data.message); setTimeout(() => {setErrorMsg("")}, 3000); });
 		setNewPassword("");
 	}
 
