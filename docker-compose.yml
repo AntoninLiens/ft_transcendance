@@ -14,25 +14,25 @@ services:
     networks:
       - inside
 
-  # backend:
-  #   container_name: ft_backend
-  #   build: ./app-backend
-  #   depends_on:
-  #     - database
-  #   ports:
-  #     - 5000:5000
-  #   networks:
-  #     - inside
+  backend:
+    container_name: ft_backend
+    build: ./app-backend
+    depends_on:
+      - database
+    ports:
+      - 5000:5000
+    networks:
+      - inside
 
-  # frontend:
-  #   container_name: ft_frontend
-  #   build: ./app-frontend
-  #   depends_on:
-  #     - backend
-  #   ports:
-  #     - 3000:3000
-  #   networks:
-  #     - inside
+  frontend:
+    container_name: ft_frontend
+    build: ./app-frontend
+    depends_on:
+      - backend
+    ports:
+      - 3000:3000
+    networks:
+      - inside
 
 volumes:
   database:
