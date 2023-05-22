@@ -1,11 +1,10 @@
 .chat_component {
 	z-index: 1000;
 	position: absolute;
-	height: 45%;
-	width: 50%;
-	min-width: 300px;
 	bottom: 0;
 	right: 0;
+	height: 450px;
+	width: 500px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -27,6 +26,12 @@
 		.chat_header_title {
 			font-size: 0.8rem;
 			font-weight: 600;
+		}
+
+		.chat_header_btn {
+			width: 70px;
+			display: flex;
+			justify-content: space-between;
 		}
 
 		.chat_header_close {
@@ -126,5 +131,12 @@
 			border-radius: 4px;
 			padding: 3px;
 		}
+	}
+}
+
+@media (max-width: 500px) {
+	.chat_component {
+		width: 318px;
+		height: 300px;
 	}
 }

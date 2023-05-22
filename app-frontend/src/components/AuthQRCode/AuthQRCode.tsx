@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { AuthContext } from '../..';
-import axios from "../../utils/axios"
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../..';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import axios from "../../utils/axios"
 import "./AuthQRCode.scss"
 
 export default function AuthQRCode() {
