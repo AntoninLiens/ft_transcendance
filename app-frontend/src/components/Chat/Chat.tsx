@@ -1,10 +1,10 @@
-import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext, MatchmakingContext, WsContext } from "../..";
+import { useContext, useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { FaGamepad } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import axios from "../../utils/axios";
 import "./Chat.scss";
-import { useNavigate } from "react-router-dom";
-import { FaGamepad } from "react-icons/fa";
 
 export default function Chat() {
 	const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -56,7 +56,7 @@ export default function Chat() {
 		<div className="chat_component">
 			<div className="chat_header" style={{background: color[rand]}}>
 				<div className="chat_header_title">{`Chat with ${messageData.friend ? messageData.friend.name : messageData.group.name}`}</div>
-				<div>
+				<div className="chat_header_btn">
 					{ messageData.friend && <button title="Play with your friend!" onClick={() => playWithYourFriend(messageData.friend.id)}><FaGamepad size={30}/></button>}
 					<button className="chat_header_close" onClick={() => setIsOnChat(false)} ><MdClose size={24} /></button>
 				</div>
