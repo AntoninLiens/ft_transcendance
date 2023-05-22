@@ -1,0 +1,86 @@
+.ShopPage {
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	min-width: 320px;
+	background: linear-gradient(to top, magenta, blueviolet);
+
+	.shopBox {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		.shopTitle {
+		text-align: center;
+		border: 3px solid black;
+		margin-top: 15px;
+		padding: 5px 2px;
+		border-radius: 10px;
+		background: linear-gradient(to bottom, yellow, rgba(137, 43, 226, 0.01));
+		
+		h2 {
+			font-size: 15px;
+			text-shadow: 1px 1px whitesmoke;
+		}
+		h1 {
+			color: whitesmoke;
+			margin-top: 3px;
+			text-shadow: 2px 2px black;
+		}
+	}
+	
+		.shopWallet {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+
+			.shopMoney {
+				display: flex;
+				flex-direction: row;
+				justify-content: end;
+				align-items: center;
+				border: 3px solid black;
+				border-radius: 10px;
+				padding: 5px;
+				margin: 5px;
+				background-color: rgba(255, 217, 0, 0.6);
+				color: whitesmoke;
+				text-shadow: 1px 1px black;
+			}
+		}	
+
+		.shopList {
+			height: 80%;
+			width: 85%;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			overflow-y: scroll;
+			
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 372px) {
+	.ShopPage {
+		.shopBox {
+			.shopList {
+				width: 99%;
+			}
+			.shopYouHave {
+				display: none;
+			}
+		}
+	}
+}

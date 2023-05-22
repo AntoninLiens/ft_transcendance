@@ -1,0 +1,125 @@
+.MatchmakingBox {
+	position: fixed;
+	z-index: 10000;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	width: 318px;
+	height: 300px;
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+	border-radius: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.63);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	transition: all 0.5s ease;
+
+	h1 {
+		font-size: 2em;
+		margin-top: 15px;
+	}
+
+	.opponents {
+		padding-top: 8px;
+		width: 100%;
+		height: 40%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+
+		.opponent {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		.frame {
+			position: relative;
+			
+			.shadow_frame {
+				z-index: 10001;
+				position: absolute;
+				top: -5px;
+				left: -5px;
+				background-image: url("http://localhost:5000/uploads/frame2.png");
+				background-repeat:no-repeat;
+				background-position: center;
+				background-size: cover;
+				height: 75px;
+				width: 75px;
+			}
+
+			.fire_frame {
+				z-index: 10001;
+				position: absolute;
+				top: -5px;
+				left: -5px;
+				background-image: url("http://localhost:5000/uploads/frame.png");
+				background-repeat:no-repeat;
+				background-position: center;
+				background-size: cover;
+				height: 75px;
+				width: 75px;
+			}
+		}
+			
+		.opponent_pfp {
+			height: 65px;
+			width: 65px;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.opponent_name {
+			font-size: 0.9em;
+			margin-top: 5px;
+		}
+	}
+
+	.MatchmakingForm {
+		width: 100%;
+		height: 33%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+
+		.MatchmakingBoxBtn {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			background-color: transparent;
+			border: none;
+			color: white;
+			font-size: 1.5rem;
+			cursor: pointer;
+			
+			button {
+				padding: 5px;
+				border: 3px solid black;
+				border-radius: 7px;
+				background: rgba(245, 245, 245, 0.6);
+				
+				&:hover {
+					cursor: pointer;
+					&.yes {
+						background: chartreuse;
+					}
+					&.no {
+						background: red;
+					}
+				}
+			}
+		}
+	}
+
+	
+
+}

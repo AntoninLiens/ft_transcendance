@@ -1,0 +1,44 @@
+.PixelArtCheckbox {
+		display: inline-block;
+		position: relative;
+		font-size: 1.5rem;
+		color: whitesmoke;
+		text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		padding-left: 2rem;
+		margin-right: 1rem;
+		margin-bottom: 35px;
+		margin-top: 10px;
+	}
+	
+	.PixelArtCheckbox input {
+		display: none;
+	}
+	
+	.PixelArtCheckbox-checkmark {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 2rem;
+		width: 2rem;
+		border: 2px solid black;
+		box-sizing: border-box;
+	}
+	
+	.PixelArtCheckbox-checkmark-icon {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		height: 1rem;
+		width: 1rem;
+		background-color: whitesmoke;
+	}
+	
+	.PixelArtCheckbox input:checked ~ .PixelArtCheckbox-checkmark-icon {
+		display: none;
+	}
+	
+	.PixelArtCheckbox input:checked ~ .PixelArtCheckbox-checkmark {
+		background-color: whitesmoke;
+	}
+	

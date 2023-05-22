@@ -1,0 +1,57 @@
+.historyPage {
+
+	#isHide {
+		color: whitesmoke;
+	}
+
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: black;
+	color: whitesmoke;
+	
+	.history_box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		
+		.history_title {
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 25px;
+			padding: 10px;
+			color: cyan;
+			text-shadow: 2px 2px magenta;
+			border: 2px solid magenta;
+			box-shadow: cyan 0px 1px 4px,
+						cyan 0px 0px 0px 3px;
+			border-radius: 25px;
+			
+			h1 {
+				font-size: 1.4em;
+			}
+			h2 {
+				font-size: 0.9em;
+				margin-bottom: 3px;
+			}
+		}
+
+		.history_games {
+			overflow-y: scroll;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 100%;
+			width: 100%;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+	}
+}
+

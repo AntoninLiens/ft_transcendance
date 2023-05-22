@@ -1,0 +1,102 @@
+################################################
+// Manage user in group 
+// Matchmaking with friends
+// spectate dos not work => pad ?
+Profile page => friendProfile !!
+spectate friend does not work
+################################################
+
+// app {
+// 	- redispatch providers
+// }
+
+// connection {
+// 	- connect with API of intra 42
+//	- connect with 2fa
+// }
+
+user {
+	// - block message from user blocked
+	// - download avatar
+	// - add in-game statut ...
+	// - connect history back to front
+
+	pfp {
+		// - rename pfp with user name
+		- delete pfp when user upload another pfp (replace when pfp and newPfp = same name && same ext but not wit different ext)
+		- delete pfp when user delete account ?
+	}
+
+	- delete account ?
+}
+
+// git {
+// 	- gitignore .env
+// }
+
+// group {
+// 	- owner can update password
+// 	- admin can mute / ban twitch
+	// - create group
+	// - group statut ( public / private / protected ) => password 
+	// - mute group users
+// }
+
+// friend {
+// 	- view friend profile
+// }
+
+// chat {
+	// - access profile
+	// - invite to play
+	// - view user profile
+	// - friend / user chat
+	// - group chat
+	// - create chat socket
+// }
+
+// shop {
+// 	- use shop items in all pages
+// 	- custom : balls, maps, pads, ...
+	// - connect shop to backend
+// }
+
+// pong {
+	// - view a user / friend game
+	// - rework matchmaking {
+	// 	- create friend matchmaking
+	// 	- rework gameContext
+	// }
+	// - create game update socket {
+	// 	- create gameSocket
+	// 	- define update method ( players pos, ball pos, ... )
+	// 	- draw ball and players
+	// 	- collisions between ball and players
+	// 	- velocity of ball and players
+	// 	- loop in afterInit {
+	// 		- receive users inputs to update
+	// 		- send to front the update every frames
+	// 	}
+	// }
+	// - reload on game not supported
+	// - test pongViewer on reload
+// }
+
+// SETTINGS {
+// 	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 	- errorMsg on page
+// }
+
+// launch {
+// 	make docker compose launch the app
+// }
+
+// security {
+	// protect https
+// 	Step 1.  openssl req -x509 -newkey rsa:2048 -keyout keytmp.pem -out cert.pem -days 365
+// 	Step 2.  openssl rsa -in keytmp.pem -out key.pem
+// }
+
+// pong_battle_royale {
+// 	faire des forme  en fonction du nombre de joueur et qui se simplifie en fonction du nombre de joueur restant
+// }

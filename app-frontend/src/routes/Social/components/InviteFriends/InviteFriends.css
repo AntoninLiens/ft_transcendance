@@ -1,0 +1,33 @@
+.social_secondBox {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: linear-gradient(180deg, rgba(131,58,180,1) 0%,
+										rgba(253,29,29,1) 50%,
+										rgba(252,176,69,1) 100%);
+}
+
+.social_friendSearch {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.social_form {
+	margin-top: 70px;
+	display: flex;
+	flex-direction: row;
+}
+
+.social_searchBar {
+	border-radius: 10px;
+	height: 2.5em;
+	background: rgba(245, 245, 245, 0.8);
+}
+
+.social_SearchButton {
+	margin-left: 5px;
+}

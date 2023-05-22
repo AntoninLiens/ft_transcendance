@@ -1,0 +1,60 @@
+.social_pending {
+	height: 70px;
+	width: 99%;
+	border: 4px solid black;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.4);
+	margin: 4px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.social_pending button {
+	border: none;
+	background: none;
+}
+
+.social_pendingProfile {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: 5px;
+}
+
+.social_pendingPfp {
+	height: 55px;
+	width: 55px;
+	border: 2px solid black;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center;
+}
+
+.social_pendingName {
+	margin-left: 10px;
+	font-size: 0.85em;
+	text-shadow: 1px 1px whitesmoke;
+}
+
+.social_pending .social_pendingButton {
+    margin-right: 25px;
+}
+
+@media screen and (min-width: 1024px) {
+	.social_pending {
+		height: 100px;
+	}
+	.social_pendingPfp {
+		height: 85px;
+		width: 85px;
+	}
+	.social_pendingName {
+		font-size: 1.7em;
+	}
+	.social_pending button {
+		scale: 1.5;
+		margin: 0px 5px;
+	}
+}

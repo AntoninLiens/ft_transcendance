@@ -1,0 +1,107 @@
+.group {
+    width: 99%;
+    height: 90px;
+    border: 3px solid black;
+    border-radius: 15px;
+    background: rgba(245, 245, 245, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+
+    .group_info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0px 10px;
+        font-size: 1.3em;
+
+        .group_info_column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .manageStatus {
+                background: violet;
+                padding: 5px;
+                border: 1px solid transparent;
+                border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+                border-radius: 10px;
+                margin-left: -4px;
+
+                option {
+                    border: 1px solid black;
+                    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .manageUsers {
+            margin-left: 20px;
+        }
+    }
+
+    .group_buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+
+        .group_addMembers {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 20px;
+
+            p {
+                margin-left: 25px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.8em;
+                text-align: center;
+            }
+
+            .group_addMembersBtn {
+                margin-left: 10px;
+            }
+        }
+        
+        .group_Btn {
+            padding: 10px;
+        }
+
+        input {
+            height: 35px;
+            border: solid 2px violet;
+
+            &::placeholder {
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 600;
+				font-size: 1em;
+			}
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .group {
+        flex-direction: column;
+        height: 150px;
+        justify-content: center;
+        align-items: flex-start;
+
+        .group_buttons {
+            width: 100%;
+            margin: 0;
+            margin-top: 20px;
+
+            input {
+                margin-left: 10px;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,116 @@
+.NavBar {
+	min-height: 659px;
+	display: inline-block;
+	margin: 0;
+	top: 0;
+	height: 100vh;
+	width: 60px;
+	position: relative;
+	transition: 0.5s ease-in-out;
+	z-index: 3;
+}
+
+.fold {
+	left: 0;
+}
+
+.unfold {
+	left: -60px;
+}
+
+.NavBar .affNavBar {
+	position: relative;
+	color: black;
+	margin: 11px 5px;
+	padding: 12px;
+	left: 0;
+}
+
+.NavBar .affNavBar:hover {
+	color: whitesmoke;
+	background: rgba(0, 0, 0);
+	border-radius: 50%;
+}
+
+.affNavBar .NavBarNotif {
+	position: absolute;
+	top: 18px;
+	right: 4px;
+	transform: translate(-50%, -50%);
+	height: 10px;
+	width: 10px;
+	background: red;
+	border: 1.5px solid whitesmoke;
+	border-radius: 50%;
+}
+
+#isHere {
+	position: absolute;
+}
+
+#isHide {
+	position: fixed;
+}
+
+.hide {
+	display: none;
+}
+
+.NavBar ul {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 55px 0;
+	background: rgba(245, 245, 245, 0.7);
+}
+
+.NavBar ul li {
+	margin: 11px 5px;
+	padding: 12px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	text-align: center;
+}
+
+a:-webkit-any-link {
+	text-decoration: none;
+	color: black;
+}
+
+.NavBar ul li:hover a:-webkit-any-link {
+	text-decoration: none;
+	color: white;
+}
+
+.NavBar ul li:hover {
+	background: black;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.signout {
+	position: absolute;
+	bottom: 55px;
+	margin: 0 5px;
+}
+
+.settings {
+	position: absolute;
+	bottom: 0;
+}
+
+@media screen and (max-height: 569px) {
+	.NavBar {
+		min-height: 569px;
+	}
+
+	.NavBar .affNavBar {
+		margin: 5px;
+	}
+
+	.NavBar ul li {
+		margin: 5px;
+		padding: 10px;
+	}
+}

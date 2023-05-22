@@ -1,0 +1,21 @@
+.loading-roll-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	
+	.loading-roll {
+	  border-radius: 50%;
+	  width: 30px;
+	  height: 30px;
+	  border: 3px solid #ccc;
+	  border-top-color: #007bff;
+	  animation: loading-roll-spin 1s ease-in-out infinite;
+	}
+}
+  
+@keyframes loading-roll-spin {
+	to {
+	  transform: rotate(360deg);
+	}
+}

@@ -1,0 +1,49 @@
+.readyPage {
+	background: rgba(25, 123, 161, 0.581);
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.readyPage.hide, .readyBox.hide, .lastCounter.hide {
+	display: none;
+}
+
+.lastCounter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 200px;
+	background-color: #f7f7f7;
+	border-radius: 50%;
+	font-size: 4rem;
+	font-weight: bold;
+	color: #333;
+	animation: scale-down 1s ease-in-out;
+  }
+  
+  @keyframes scale-down {
+	from {
+	  transform: scale(1.2);
+	}
+	to {
+	  transform: scale(1);
+	}
+  }
+  
+  .lastCounter-text {
+	animation: fade-in 1s ease-in-out;
+  }
+  
+  @keyframes fade-in {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+  }

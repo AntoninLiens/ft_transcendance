@@ -1,0 +1,127 @@
+.leaderboardPage {
+	background: linear-gradient(180deg, rgba(57,14,176,1) 0%, rgba(169,23,92,1) 100%);
+	position: relative;
+    height: 100%;
+    width: 100%;
+	min-height: 825px;
+}
+
+.leaderboardPage .NavBar {
+	min-height: 825px;
+}
+
+.leaderboardPage .NavBar li {
+	margin: 20px 5px;
+}
+
+.leaderboardTitle {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%);
+	text-align: center;
+	border: 3px solid black;
+	margin-top: 15px;
+	padding: 5px 2px;
+	border-radius: 10px;
+	background: linear-gradient(to bottom, yellow, rgba(137, 43, 226, 0.01));
+}
+
+.leaderboardTitle h2 {
+	font-size: 15px;
+	text-shadow: 1px 1px whitesmoke;
+}
+
+
+.leaderboardTitle h1 {
+	color: whitesmoke;
+	margin-top: 3px;
+	font-size: 20px;
+	text-shadow: 2px 2px black;
+}
+
+.topPlayers {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.top3 {
+	display: flex;
+	height: 50%;
+	justify-content: space-evenly;
+}
+
+.top3Box > .name {
+	margin: 10px;
+	color: black;
+}
+
+.top3Box {
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	width: calc(30%);
+}
+
+.podiumItem-1 {
+	color: gold;
+	height: 50%;
+}
+
+.podiumItem-2 {
+	color: red;	
+	height: 35%;
+}
+
+.podiumItem-3 {
+	color: green;
+	height: 25%;
+}
+
+.podiumName {
+	margin: 3px;
+	color: rgb(220, 220, 220);
+}
+
+.podiumItem {
+	border: red solid;
+	border-radius: 15px 15px 5px 5px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	box-shadow: 0 -9px 2px 1px rgba(0, 0, 0, 0.481);
+	border: 6px rgba(255, 0, 0, 0.311) solid;
+	background: rgb(37, 37, 37);
+}
+
+.top10 {
+	padding: 20px;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.top10Item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: whitesmoke;
+	padding: 0 15px;
+	margin: 2px;
+	border-radius: 10px;
+	width: 100%;
+	flex-grow: 1;
+	background: rgb(37, 37, 37);
+	box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.481);
+	border: 5px rgba(0, 0, 255, .2) solid;
+}

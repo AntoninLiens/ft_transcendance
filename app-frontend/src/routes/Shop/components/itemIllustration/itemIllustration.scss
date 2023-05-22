@@ -1,0 +1,194 @@
+.item_illustration {
+	.item_small {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.item_box {
+			height: 80px;
+			width: 140px;
+			margin: 5px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.item_pad {
+				height: 12px;
+				width: 70px;
+				border: 1px solid black;
+				border-radius: 2px;
+				animation: coulissage 3s ease-in-out infinite;
+			}
+
+			.ball_box {
+				width: 100%;
+				height: 80px;
+				position: relative;
+				-webkit-animation: moveX 1s linear 0s infinite alternate, moveY 2.4s linear 0s infinite alternate;
+				-moz-animation: moveX 1s linear 0s infinite alternate, moveY 2.4s linear 0s infinite alternate;
+				-o-animation: moveX 1s linear 0s infinite alternate, moveY 2.4s linear 0s infinite alternate;
+				animation: moveX 1s linear 0s infinite alternate, moveY 2.4s linear 0s infinite alternate;
+
+				.item_ball {
+					display: block;
+					height: 25px;
+					width: 25px;
+					border: 1px solid black;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		.item_image {
+			height: 100px;
+			width: 100px;
+			margin: 5px auto;
+			border-radius: 5px;
+			border: 2px solid black;
+		}
+
+		.item_video {
+			height: 73px;
+			width: 130px;
+			border-radius: 10px;
+			transition: transform .2s;
+			margin: 7px 0px;
+			background: rgba(0, 0, 0, 0.9);
+	
+			&:hover {
+				position: relative;
+				z-index: 1;
+				transform: scale(3);
+			}
+		}
+	}
+
+	.item_big {
+		.confirm_video {
+			width: 505px;
+			height: 285px;
+			margin-top: -30px;
+			margin-bottom: 5px;
+		}
+
+		.big_box {
+			position: relative;
+			height: 270px;
+			width: 530px;
+			margin-top: -30px;
+			margin-bottom: 10px;
+			background: black;
+			border: 3px solid whitesmoke;
+			border-radius: 20px;
+
+			.big_pad_one {
+				position: absolute;
+				height: 100px;
+				width: 20px;
+				margin: 10px;
+				border: 1px solid whitesmoke;
+				border-radius: 3px;
+				animation: coulissage_up_down 1.5s ease-in-out infinite;
+			}
+			
+			.big_pad_two {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				height: 100px;
+				width: 20px;
+				margin: 10px;
+				border: 1px solid whitesmoke;
+				border-radius: 3px;
+				animation: coulissage_down_up 1.5s ease-in-out infinite;
+			}
+
+			.big_ball_box {
+				width: 100%;
+				height: 80px;
+				position: relative;
+				-webkit-animation: moveX2 1s linear 0s infinite alternate, moveY2 2.4s linear 0s infinite alternate;
+				-moz-animation: moveX2 1s linear 0s infinite alternate, moveY2 2.4s linear 0s infinite alternate;
+				-o-animation: moveX2 1s linear 0s infinite alternate, moveY2 2.4s linear 0s infinite alternate;
+				animation: moveX2 1s linear 0s infinite alternate, moveY2 2.4s linear 0s infinite alternate;
+
+				.big_ball {
+					display: block;
+					height: 45px;
+					width: 45px;
+					border: 1px solid whitesmoke;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}
+
+@keyframes coulissage {
+	0% {transform: translate(-49%, 0);}
+	50% {transform: translate(49%, 0);}
+	100% {transform: translate(-49%, 0);}
+}
+
+@-webkit-keyframes moveX {
+	from { left: 0; } to { left: 120px; }
+}
+@-moz-keyframes moveX {
+	from { left: 0; } to { left: 120px; }
+}
+@-o-keyframes moveX {
+	from { left: 0; } to { left: 120px; }
+}
+@keyframes moveX {
+	from { left: 0; } to { left: 120px; }
+}
+@-webkit-keyframes moveY {
+	from { top: 0; } to { top: 80px; }
+}
+@-moz-keyframes moveY {
+	from { top: 0; } to { top: 80px; }
+}
+@-o-keyframes moveY {
+	from { top: 0; } to { top: 80px; }
+}
+@keyframes moveY {
+	from { top: 0; } to { top: 80px; }
+}
+
+@keyframes coulissage_up_down {
+	0% {top: 0%;}
+	50% {top: 55%;}
+	100% {top: 0%;}
+}
+
+@keyframes coulissage_down_up {
+	0% {bottom: 0%;}
+	50% {bottom: 55%;}
+	100% {bottom: 0%;}
+}
+
+@-webkit-keyframes moveX2 {
+	from { left: -5px; } to { left: 480px; }
+}
+@-moz-keyframes moveX2 {
+	from { left: -5px; } to { left: 480px; }
+}
+@-o-keyframes moveX2 {
+	from { left: -5px; } to { left: 480px; }
+}
+@keyframes moveX2 {
+	from { left: -5px; } to { left: 480px; }
+}
+@-webkit-keyframes moveY2 {
+	from { top: -5px; } to { top: 220px; }
+}
+@-moz-keyframes moveY2 {
+	from { top: -5px; } to { top: 220px; }
+}
+@-o-keyframes moveY2 {
+	from { top: -5px; } to { top: 220px; }
+}
+@keyframes moveY2 {
+	from { top: -5px; } to { top: 220px; }
+}

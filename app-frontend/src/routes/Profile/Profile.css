@@ -1,0 +1,118 @@
+.profilePage {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: black;
+	color: whitesmoke;
+}
+
+.profile_animated_background {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 50%;
+	min-height: 50%;
+	margin: auto;
+  }
+
+.profile_box {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	width: 270px;
+	height: 480px;
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	background: rgba(0, 0, 0, 0.8);
+	border: 4px solid rgba(255, 255, 0, 0.8);
+	border-radius: 15px;
+	margin-top: -10px;
+}
+
+.profile_pfp {
+	position: absolute;
+	border: 3px solid yellow;
+	border-radius: 100px;
+	padding: 80px;
+	left: 50%;
+	top: 29%;
+	transform: translate(-50%, -50%);
+	background-size: cover;
+	background-position: center;
+}
+
+.profile_edit {
+	position: absolute;
+	left: 73%;
+	top: 42%;
+	transform: translate(-50%, -50%);
+	padding: 6px;
+	border: 2px solid yellow;
+	border-radius: 50%;
+	background: black;
+	cursor: pointer;
+}
+
+.profile_name {
+	text-align: center;
+	margin-top: 15px;
+	font-size: 1.6em;
+}
+
+.profile_wins {
+	position: absolute;
+	left: 10%;
+	top: 54%;
+}
+
+.profile_loose {
+	position: absolute;
+	left: 10%;
+	top: 62%;
+}
+
+.profile_coins {
+	position: absolute;
+	left: 10%;
+	top: 70%;
+}
+
+.profile_score {
+	position: absolute;
+	left: 10%;
+	top: 78%;
+}
+
+.profile_lvl {
+	position: absolute;
+	left: 70px;
+	bottom: 10%;
+}
+
+.profile_xpBar {
+	position: absolute;
+	height: 20px;
+	width: 250px;
+	border: 3px solid whitesmoke;
+	border-radius: 10px;
+	left: 5px;
+	bottom: 3%;
+}
+
+.profile_xp {
+	background-color: aqua;
+	border-radius: 10px;
+	height: 14px;
+}
+
+.profilePage #isHide {
+	color: whitesmoke;
+}
+
+.cheat_code {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}

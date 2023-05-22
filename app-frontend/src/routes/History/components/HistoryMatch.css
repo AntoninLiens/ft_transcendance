@@ -1,0 +1,89 @@
+.history_match {
+	width: 98%;
+	height: 120px;
+	padding: 5px;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border: 3px solid magenta;
+	box-shadow: cyan 3px 3px 6px 0px inset,
+	cyan -3px -3px 6px 1px inset;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.history_playerOne {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 100%;
+}
+
+.history_playerOnePfp {
+	width: 65px;
+	height: 65px;
+	border: 3px solid red;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center;
+}
+
+.history_playerOneName {
+	text-align: center;
+	margin-top: 10px;
+	color: red;
+}
+
+.win1 {
+	border-color: greenyellow;
+	color: greenyellow;
+}
+
+.shortedP1 {
+	font-size: 0.7em;
+}
+
+
+.history_vs {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	color: cyan;
+	text-shadow: 1.5px 1.5px magenta;
+}
+
+.history_playerTwo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 100%;
+}
+
+.history_playerTwoPfp {
+	width: 65px;
+	height: 65px;
+	border: 3px solid red;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center;
+}
+
+.history_playerTwoName {
+	text-align: center;
+	margin-top: 10px;
+	color: red;
+}
+
+.win2 {
+	border-color: greenyellow;
+	color: greenyellow;
+}
+
+.shortedP2 {
+	font-size: 0.7em;
+}

@@ -1,0 +1,46 @@
+.SocialPage {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.SocialPage button {
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+.SocialPage button:hover {
+	cursor: pointer;
+	border-radius: 50%;
+	box-shadow: 0px 0px 24px 5px rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.social_cancelButton {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 12px;
+	margin: 5px;
+}
+
+.social_inviteMessageBox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+}
+
+.social_inviteMessage {
+	text-align: center;
+}
+
+.social_inviteMessage .hide {
+	display: none;
+}
+
+.hide {
+	display: none;
+}
