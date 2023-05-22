@@ -29,10 +29,14 @@
 			font-weight: 600;
 		}
 
-		.chat_header_close {
-			cursor: pointer;
-			font-size: 1.2rem;
-			font-weight: 600;
+		div {
+			display: flex;
+
+			.chat_header_close {
+				cursor: pointer;
+				font-size: 1.2rem;
+				font-weight: 600;
+			}
 		}
 	}
 

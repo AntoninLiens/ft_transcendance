@@ -5,10 +5,10 @@ export class Setting {
 	@PrimaryGeneratedColumn({ type: 'int' })
 	id: number;
 
-	@Column({ type: 'char', default: 'W' })
+	@Column({ type: 'varchar', default: 'W' })
 	moveUp: string;
 
-	@Column({ type: 'char', default: 'S' })
+	@Column({ type: 'varchar', default: 'S' })
 	moveDown: string;
 
 	@Column({ type: 'boolean', default: true })

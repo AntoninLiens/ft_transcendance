@@ -56,8 +56,10 @@ export default function Chat() {
 		<div className="chat_component">
 			<div className="chat_header" style={{background: color[rand]}}>
 				<div className="chat_header_title">{`Chat with ${messageData.friend ? messageData.friend.name : messageData.group.name}`}</div>
-				{ messageData.friend && <button title="Play with your friend!" onClick={() => playWithYourFriend(messageData.friend.id)}><FaGamepad size={30}/></button>}
-				<button className="chat_header_close" onClick={() => setIsOnChat(false)} ><MdClose size={24} /></button>
+				<div>
+					{ messageData.friend && <button title="Play with your friend!" onClick={() => playWithYourFriend(messageData.friend.id)}><FaGamepad size={30}/></button>}
+					<button className="chat_header_close" onClick={() => setIsOnChat(false)} ><MdClose size={24} /></button>
+				</div>
 			</div>
 			<div className="chat_body">
 				{

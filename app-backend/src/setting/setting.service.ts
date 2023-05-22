@@ -25,22 +25,6 @@ export class SettingService {
 	}
 
 	async update(user: Users, props: any) {
-		console.log(props);
-		let i = -1;
-		const moveList = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
-		while (++i < moveList.length)
-			if (moveList[i] === props.moveUp)
-				break ;
-		if (i === moveList.length)
-			throw new HttpException("Invalid moveUp it must be a letter", HttpStatus.BAD_REQUEST);
-
-		i = -1;
-		while (++i < moveList.length)
-			if (moveList[i] === props.moveDown)
-				break ;
-		if (i === moveList.length)
-			throw new HttpException("Invalid moveDown it muest be a letter", HttpStatus.BAD_REQUEST);
-
 		const setting = await this.getSettingByUser(user);
 		if (!setting)
 			throw new HttpException("Setting not found", HttpStatus.NOT_FOUND);

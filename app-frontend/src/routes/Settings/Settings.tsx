@@ -74,13 +74,13 @@ export default function Settings() {
 		else {
 			if (event.keyCode >= 37 && event.keyCode <= 40) {
 				if (event.keyCode === 37) 
-					setUpKeyValue("Left arrow");
+					setUpKeyValue("ARROWLEFT");
 				else if (event.keyCode === 38) 
-					setUpKeyValue("Up arrow");
+					setUpKeyValue("ARROWUP");
 				else if (event.keyCode === 39) 
-					setUpKeyValue("Rigth arrow");
+					setUpKeyValue("ARROWRIGTH");
 				else
-					setUpKeyValue("Down arrow");
+					setUpKeyValue("ARROWDOWN");
 			}
 			else
 				setUpKeyValue(intToChar(event.keyCode));
@@ -94,13 +94,13 @@ export default function Settings() {
 		else {
 			if (event.keyCode >= 37 && event.keyCode <= 40) {
 				if (event.keyCode === 37) 
-					setDownKeyValue("Left arrow");
+					setDownKeyValue("ARROWLEFT");
 				else if (event.keyCode === 38) 
-					setDownKeyValue("Up arrow");
+					setDownKeyValue("ARROWUP");
 				else if (event.keyCode === 39) 
-					setDownKeyValue("Rigth arrow");
+					setDownKeyValue("ARROWRIGTH");
 				else
-					setDownKeyValue("Down arrow");
+					setDownKeyValue("ARROWDOWN");
 			}
 			else
 				setDownKeyValue(intToChar(event.keyCode));
@@ -203,7 +203,6 @@ export default function Settings() {
 			"showProfile": profileChecked,
 			"enableQrCode": qrCodeChecked,
 		})
-		.catch(err => { console.log("error", err) });
 
 		if (changePSWToggle === "show") {
 			await axios.put("user/updatePassword", {
