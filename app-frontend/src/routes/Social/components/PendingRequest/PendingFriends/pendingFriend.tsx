@@ -37,18 +37,18 @@ export default function PendingFriend({demander, setter}: any) {
 		.catch(err => { console.log("Pending friend error: ", err); });
 	}
 
-	const blockRequest = async () => {
-		await axios.put("friends/block", { name: demander.name })
-		.catch(err => { console.log("Block friend error: ", err); });
+	// const blockRequest = async () => {
+	// 	await axios.put("friends/block", { name: demander.name })
+	// 	.catch(err => { console.log("Block friend error: ", err); });
 
-		await axios.get("friends/pending")
-		.then(res => {
-			if (res.data.length === 0)
-				setPendingNotif(false);
-			setter(res.data)
-		})
-		.catch(err => { console.log("Pending friend error: ", err); });
-	}
+	// 	await axios.get("friends/pending")
+	// 	.then(res => {
+	// 		if (res.data.length === 0)
+	// 			setPendingNotif(false);
+	// 		setter(res.data)
+	// 	})
+	// 	.catch(err => { console.log("Pending friend error: ", err); });
+	// }
 
 	// render
 	return (
@@ -63,7 +63,7 @@ export default function PendingFriend({demander, setter}: any) {
 			<div className="social_pendingButton">
 				<button onClick={acceptRequest}><FcApprove size={25}/></button>
 				<button onClick={declineRequest}><FcDisapprove size={25}/></button>
-				<button onClick={blockRequest}><MdBlockFlipped size={25} color={"red"}/></button>
+				{/* <button onClick={blockRequest}><MdBlockFlipped size={25} color={"red"}/></button> */}
 			</div>
 		</div>
 		);
