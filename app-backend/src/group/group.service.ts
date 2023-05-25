@@ -140,10 +140,10 @@ export class GroupService {
 		.getOne();
 
 		if (!group)
-		throw new HttpException('You\'re not an admin', 400);
+			throw new HttpException('You\'re not an admin', 400);
 		const user = await this.userServices.getUserByName(userName);
 		if (!user)
-		throw new HttpException('User does not exist', 400);
+			throw new HttpException('User does not exist', 400);
 		
 		if (group.members.find(member => member.id === user.id)) {
 			group.members = group.members.filter(member => member.id !== user.id);
@@ -165,7 +165,6 @@ export class GroupService {
 		.leftJoinAndSelect("groups.members", "members")
 		.leftJoinAndSelect("groups.muted", "muted")
 		.where("groups.name = :groupName", { groupName })
-		.andWhere("(owner.name = :name OR admins.name = :name OR members.name = :name)", { name: admin.name })
 		.getOne();
 
 		if (admin.name === group.owner.name) {
@@ -179,10 +178,11 @@ export class GroupService {
 			}
 			else return await this.groupRepository.delete({ id: group.id })
 		}
-		else {
+		else if (group.admins.find(admin => admin.name === admin.name) || group.members.find(member => member.name === admin.name)) {
 			group.admins = group.admins.filter((member) => member.id !== admin.id);
 			group.members = group.members.filter((member) => member.id !== admin.id);
 		}
+		else throw new HttpException('You\'re not in this group', 400);
 		return await this.groupRepository.save(group);
 	}
 
