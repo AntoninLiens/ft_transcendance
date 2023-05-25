@@ -94,7 +94,7 @@ const Pong : React.FC<PongProps> = ({ viewer }) => {
 			}
 			discoBall(ballpos, state.ballPosY, 15 * ratio.current);
 			discoPlayer(20 * ratio.current, userPos - (100 * ratio.current) / 2, 20 * ratio.current, 100 * ratio.current, padColor);
-			discoPlayer(size.current - (40 * ratio.current), oppPos - (100 * ratio.current) / 2, 20 * ratio.current, 100 * ratio.current, opponent.pad);
+			discoPlayer(size.current - (40 * ratio.current), oppPos - (100 * ratio.current) / 2, 20 * ratio.current, 100 * ratio.current, opponent ? opponent.pad : "white");
 		}
 		else {
 			discoBall(state.ballPosX, state.ballPosY, 15 * ratio.current);
