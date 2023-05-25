@@ -10,7 +10,7 @@ export default function Chat() {
 	const textareaRef = useRef<HTMLTextAreaElement>(null);
 	const [chatContent, setChatContent] = useState("");
 	const { messageData, setIsOnChat, sendMessage, playWithFriend } = useContext(WsContext);
-	const { users, setFriendProfile } = useContext(AuthContext);
+	const { users, setOserProfile } = useContext(AuthContext);
 	const { connect } = useContext(MatchmakingContext);
 	const [chat, setChat] = useState<any[]>([]);
 	const navigate = useNavigate();
@@ -43,7 +43,7 @@ export default function Chat() {
 	}
 
 	const handlePfp = (name: string) => {
-		setFriendProfile(name);
+		setOserProfile(name);
 		navigate("/homepage/profile");
 	}
 
